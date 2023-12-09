@@ -18,7 +18,7 @@ Java.perform(function() {
   // Specify the desired overload of loadClass()
   loadClass.overload('java.lang.String').implementation = function(className) {
     var loadedClass = loadClass.call(this, className);
-    if (!(classNames.includes(className))&&className.includes("wps")) {
+    if (!(classNames.includes(className))&&className.includes("targetClass")) {
       classNames.push(className);
       console.log('[+] New class loaded:', className);
     }
